@@ -14,21 +14,18 @@
                 <div class="row border-bottom"> 
                     <%= render "layouts/topbar" %>              
                 </div>            
-                <div class="wrapper wrapper-content">
+                <div class="wrapper wrapper-content animated fadeInDown">
                     <div class="row">
-                        <div class="middle-box text-center animated fadeInRightBig">
-                            <h3 class="font-bold">This is page content</h3> 
-							<% unless current_user %>
-							  <li><%= link_to "/auth/facebook" do %><%= image_tag('facebook.png', width: '40', heigth: '40', class: 'img-circle') %><% end %></li>
-							  <li><%= link_to "/auth/twitter" do %><%= image_tag('twitter.png', width: '40', heigth: '40', class: 'img-circle') %><% end %></li>
-							<% end %>
+    					<% unless current_user %>
+    					  <li><%= link_to "/auth/facebook" do %><%= image_tag('facebook.png', width: '40', heigth: '40', class: 'img-circle') %><% end %></li>
+    					  <li><%= link_to "/auth/twitter" do %><%= image_tag('twitter.png', width: '40', heigth: '40', class: 'img-circle') %><% end %></li>
+    					<% end %>
 
-							<% flash.each do |key, value| %>
-								<div class="alert alert-info"><%= value %></div>
-							<% end %>
+    					<% flash.each do |key, value| %>
+    						<div class="alert alert-info"><%= value %></div>
+    					<% end %>
 
-						    <%= yield %>
-                        </div>
+    				    <%= yield %>
                     </div>
                 </div>
 				<%= render "layouts/footer" %>

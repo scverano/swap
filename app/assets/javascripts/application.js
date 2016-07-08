@@ -15,7 +15,12 @@
 //= require turbolinks
 //= require jquery-2.1.1
 //= require bootstrap.min
+//
+// Plugins
 //= require metisMenu/jquery.metisMenu
 //= require slimscroll/jquery.slimscroll.min
+//= require masonary/masonry.pkgd.min
+//
+// Always at the bottom
 //= require inspinia
 //= require pace/pace.min
