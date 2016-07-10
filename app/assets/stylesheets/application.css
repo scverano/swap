@@ -13,6 +13,9 @@
  *= require_self
  *= require bootstrap.min
  *= require font-awesome
+ *= require bootstrap-social
  *= require animate
+ *
+ * Always at the bottom
  *= require style
  */

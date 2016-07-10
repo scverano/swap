@@ -9,18 +9,13 @@
 
     <body class="<%= current_user.nil? ? "mini-navbar fixed-sidebar fixed-nav" : "fixed-sidebar fixed-nav" %>"> 
         <div id="wrapper"> 
-			<%= render "layouts/sidebar" %>        
+			<%= render "layouts/left_sidebar" %>        
             <div id="page-wrapper" class="gray-bg"> 
                 <div class="row border-bottom"> 
                     <%= render "layouts/topbar" %>              
                 </div>            
                 <div class="wrapper wrapper-content animated fadeInDown">
                     <div class="row">
-    					<% unless current_user %>
-    					  <li><%= link_to "/auth/facebook" do %><%= image_tag('facebook.png', width: '40', heigth: '40', class: 'img-circle') %><% end %></li>
-    					  <li><%= link_to "/auth/twitter" do %><%= image_tag('twitter.png', width: '40', heigth: '40', class: 'img-circle') %><% end %></li>
-    					<% end %>
-
     					<% flash.each do |key, value| %>
     						<div class="alert alert-info"><%= value %></div>
     					<% end %>
@@ -30,6 +25,7 @@
                 </div>
 				<%= render "layouts/footer" %>
             </div>
+            <%= render "layouts/right_sidebar" %>
         </div>
     </body>
 </html>
