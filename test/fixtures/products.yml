@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  price: 9.99
+  is_active: false
+  user: one
+  category: one
+  ad_type: one
+  status: one
+  condition: one
+  region: one
+  province: one
+  municipality: one
+
+two:
+  name: MyString
+  description: MyText
+  price: 9.99
+  is_active: false
+  user: two
+  category: two
+  ad_type: two
+  status: two
+  condition: two
+  region: two
+  province: two
+  municipality: two
