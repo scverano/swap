@@ -39,7 +39,7 @@
 </style> 
 
 <script>
-    $(window).load(function() {
+    $(document).on("turbolinks:load", function () {
         $('.grid').masonry({
             // options
             itemSelector: '.grid-item',
