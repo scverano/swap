@@ -44,7 +44,7 @@
             // options
             itemSelector: '.grid-item',
             columnWidth: 260,
-            gutter: <%= current_user.nil? ? 15 : 30 %>
+            gutter: "<%#= current_user.nil? ? 15 : 30 %>"
         });
     });
 </script>  

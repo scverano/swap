@@ -7,7 +7,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-    <body class="<%= current_user.nil? ? "mini-navbar fixed-sidebar fixed-nav" : "fixed-sidebar fixed-nav" %>"> 
+    <body class="<%#= current_user.nil? ? "mini-navbar fixed-sidebar fixed-nav" : "fixed-sidebar fixed-nav" %>"> 
         <div id="wrapper"> 
 			<%= render "layouts/left_sidebar" %>        
             <div id="page-wrapper" class="gray-bg"> 

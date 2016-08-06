@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  belongs_to :user
+  # belongs_to :user
   belongs_to :category
   belongs_to :ad_type
   belongs_to :status

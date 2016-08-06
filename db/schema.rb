@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 20160720020032) do
     t.text     "description"
     t.decimal  "price"
     t.boolean  "is_active"
-    t.integer  "user_id"
     t.integer  "category_id"
     t.integer  "ad_type_id"
     t.integer  "status_id"
@@ -55,7 +54,6 @@ ActiveRecord::Schema.define(version: 20160720020032) do
     t.index ["province_id"], name: "index_products_on_province_id", using: :btree
     t.index ["region_id"], name: "index_products_on_region_id", using: :btree
     t.index ["status_id"], name: "index_products_on_status_id", using: :btree
-    t.index ["user_id"], name: "index_products_on_user_id", using: :btree
   end
 
   create_table "provinces", force: :cascade do |t|
@@ -72,14 +70,6 @@ ActiveRecord::Schema.define(version: 20160720020032) do
     t.string "name"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   add_foreign_key "municipalities", "provinces"
   add_foreign_key "products", "ad_types"
   add_foreign_key "products", "categories"
@@ -88,6 +78,5 @@ ActiveRecord::Schema.define(version: 20160720020032) do
   add_foreign_key "products", "provinces"
   add_foreign_key "products", "regions"
   add_foreign_key "products", "statuses"
-  add_foreign_key "products", "users"
   add_foreign_key "provinces", "regions"
 end

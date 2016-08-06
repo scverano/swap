@@ -5,7 +5,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.text :description
       t.decimal :price
       t.boolean :is_active
-      t.references :user, foreign_key: true
+      # t.references :user, foreign_key: true
       t.references :category, foreign_key: true
       t.references :ad_type, foreign_key: true
       t.references :status, foreign_key: true
