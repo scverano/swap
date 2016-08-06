@@ -2,33 +2,33 @@
 
 <%= link_to 'New Product', new_product_path %>
 
-<div class="grid"> 
+<div class="grid">
   <% @products.each do |product| %>
-    <div class="grid-item"> 
-        <div class="ibox"> 
-            <div class="ibox-content product-box"> 
-                <div class="product-imitation"> 
+    <div class="grid-item">
+        <div class="ibox">
+            <div class="ibox-content product-box">
+                <div class="product-imitation">
                     [ IMAGE HERE ]
-                </div>                     
-                <div class="product-desc"> 
-                    <span class="product-price">₱ <%= number_with_precision(product.price, :precision => 2, :delimiter => ',') %></span> 
-                    <small class="text-muted"><%= product.category.name %></small> 
+                </div>
+                <div class="product-desc">
+                    <span class="product-price">₱ <%= number_with_precision(product.price, :precision => 2, :delimiter => ',') %></span>
+                    <small class="text-muted"><%= product.category.name %></small>
                     <%= link_to product.name, product, class: 'product-name' %>
-                    <div class="small m-t-xs"><%= product.user.name %></div>                         
-                    <div class="m-t text-righ"> 
-                        <a href="#" class="btn btn-xs btn-outline btn-primary"><%= product.condition.name %> </a> 
-                        <a href="#" class="btn btn-xs btn-outline btn-primary"><%= product.region.name %> </a> 
-                        <a href="#" class="btn btn-xs btn-outline btn-primary"><%= product.province.name %> </a> 
-                        <a href="#" class="btn btn-xs btn-outline btn-primary"><%= product.municipality.name %> </a> 
-                    </div>                         
-                </div>                     
-            </div>                 
-        </div>             
-    </div>   
-  <% end %>              
+                    <div class="small m-t-xs"><%= product.user.name %></div>
+                    <div class="m-t text-righ">
+                        <a href="#" class="btn btn-xs btn-outline btn-primary"><%= product.condition.name %> </a>
+                        <a href="#" class="btn btn-xs btn-outline btn-primary"><%= product.region.name %> </a>
+                        <a href="#" class="btn btn-xs btn-outline btn-primary"><%= product.province.name %> </a>
+                        <a href="#" class="btn btn-xs btn-outline btn-primary"><%= product.municipality.name %> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <% end %>
 </div>
 
-<style> 
+<style>
     .grid .ibox {
     margin-bottom: 0;
     }
@@ -36,7 +36,7 @@
     margin-bottom: 10px;
     width: 260px;
     }
-</style> 
+</style>
 
 <script>
     $(document).on("turbolinks:load", function () {
@@ -44,7 +44,7 @@
             // options
             itemSelector: '.grid-item',
             columnWidth: 260,
-            gutter: "<%#= current_user.nil? ? 15 : 30 %>"
+            gutter: <%= current_user.nil? ? 15 : 30 %>
         });
     });
-</script>  
+</script>
