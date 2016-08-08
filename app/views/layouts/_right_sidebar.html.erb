@@ -1,40 +1,42 @@
-<div id="right-sidebar"> 
-    <div class="sidebar-container"> 
-        <ul class="nav nav-tabs navs-3">    
+<div id="right-sidebar">
+    <div class="sidebar-container">
+        <ul class="nav nav-tabs navs-3">
             <li class="active">
                 <a data-toggle="tab" href="#tab-1"> Log in </a>
-            </li>         
+            </li>
             <li>
-                <a data-toggle="tab" href="#tab-2"> 
+                <a data-toggle="tab" href="#tab-2">
                         FAQ</a>
-            </li>  
+            </li>
             <li class=""><a data-toggle="tab" href="#tab-3">
                         <i class="fa fa-gear"></i></a>
-            </li>           
-        </ul>         
-        <div class="tab-content">             
-            <div id="tab-1" class="tab-pane active"> 
-                <div class="sidebar-title"> 
-                    <h3><i class="fa fa-sign-in"></i> Log in with</h3> 
-                    <small><i class="fa fa-tim"></i> Social media accounts.</small> 
-                </div>                 
-                <div class="setings-item"> 
-                    <span> 
-                        <%= link_to "/auth/facebook", class: "btn btn-block btn-social btn-facebook" do %> <span class="fa fa-facebook"></span> Log in with Facebook<% end %>
-                    </span>                      
-                </div>                 
-                <div class="setings-item"> 
-                    <span> 
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="tab-1" class="tab-pane active">
+                <div class="sidebar-title">
+                    <h3><i class="fa fa-sign-in"></i> Log in with</h3>
+                    <small><i class="fa fa-tim"></i> Social media accounts.</small>
+                </div>
+                <div class="setings-item">
+                    <span>
+                        <%= link_to user_facebook_omniauth_authorize_path, class: "btn btn-block btn-social btn-facebook" do %>
+                          <span class="fa fa-facebook"></span> Sign In with Facebook
+                        <% end %>
+                    </span>
+                </div>
+                <div class="setings-item">
+                    <span>
                         <%= link_to "/auth/twitter", class: "btn btn-block btn-social btn-twitter" do %> <span class="fa fa-twitter"></span> Log in with Twitter<% end %>
-                    </span>                    
-                </div>                                            
-            </div>  
-            <div id="tab-2" class="tab-pane"> 
-                <div class="sidebar-title"> 
-                    <h3> <i class="fa fa-cube"></i> Latest FAQ</h3> 
-                    <small><i class="fa fa-tim"></i> You have 14 projects. 10 not completed.</small> 
-                </div>                              
-            </div>  
+                    </span>
+                </div>
+            </div>
+            <div id="tab-2" class="tab-pane">
+                <div class="sidebar-title">
+                    <h3> <i class="fa fa-cube"></i> Latest FAQ</h3>
+                    <small><i class="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
+                </div>
+            </div>
 
             <div id="tab-3" class="tab-pane">
 
@@ -82,6 +84,6 @@
                 </div>
 
             </div>
-        </div>         
-    </div>     
+        </div>
+    </div>
 </div>
