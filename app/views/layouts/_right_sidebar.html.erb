@@ -27,6 +27,13 @@
                 </div>
                 <div class="setings-item">
                     <span>
+                        <%= link_to user_google_oauth2_omniauth_authorize_path, class: "btn btn-block btn-social btn-google" do %>
+                          <span class="fa fa-google"></span> Sign In with Google
+                        <% end %>
+                    </span>
+                </div>
+                <div class="setings-item">
+                    <span>
                         <%= link_to "/auth/twitter", class: "btn btn-block btn-social btn-twitter" do %> <span class="fa fa-twitter"></span> Log in with Twitter<% end %>
                     </span>
                 </div>
