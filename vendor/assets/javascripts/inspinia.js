@@ -98,10 +98,10 @@ $(document).on("turbolinks:load", function () {
 
     // Append config box / Only for demo purpose
     // Uncomment on server mode to enable XHR calls
-   $.get("skin-config.html", function (data) {
-       if (!$('body').hasClass('no-skin-config'))
-           $('body').append(data);
-   });
+  //  $.get("skin-config.html", function (data) {
+  //      if (!$('body').hasClass('no-skin-config'))
+  //          $('body').append(data);
+  //  });
 
     // Minimalize menu
     $('.navbar-minimalize').click(function () {
@@ -297,5 +297,3 @@ function WinMove() {
         })
         .disableSelection();
 }
-
-

@@ -249,7 +249,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
     config.omniauth :facebook, '283529628683808', 'b5451b745951106eeff1c4cd696267bb', scope: 'email', info_fields: 'email,name'
-    config.omniauth :google_oauth2, '238544599454-390cpsajqscgmd6gp8s0knmdpqmp7dgn.apps.googleusercontent.com', '3Nw3akr0LemmuzQrbcXl2JDO', scope: 'email', info_fields: 'email,name'
+    config.omniauth :google_oauth2, '238544599454-390cpsajqscgmd6gp8s0knmdpqmp7dgn.apps.googleusercontent.com', '3Nw3akr0LemmuzQrbcXl2JDO', scope: 'email'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
