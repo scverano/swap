@@ -3,19 +3,20 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
+    @products = current_user.products
   end
 
   def show
   end
 
   def new
-    @product = current_user.rooms.build
+    @product = current_user.products.build
   end
 
   def create
-    @product = current_user.rooms.build(product_params)
+    @product = current_user.products.build(product_params)
 
-    if @product.save
+    if @product.save!
       redirect_to @product, notice: "Saved..."
     else
       render :new
@@ -51,6 +52,7 @@ class ProductsController < ApplicationController
     end
 
     def product_params
-      params.require[:product].permit(:name, :description, :price, :active, :is_selling, :is_available, :is_new, :is_approved)
+      params.require(:product).permit(:name, :description, :price, :active, :is_selling, :is_available, :is_new, :is_approved, :category_id)
+
     end
 end

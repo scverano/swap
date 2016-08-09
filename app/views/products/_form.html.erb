@@ -1,0 +1,18 @@
+<%= form_for @product do |f| %>
+  <%= f.text_field :name, placeholder: 'Name', class: "form-control" %>
+  <%= f.text_area :description, rows: 5, placeholder: 'Tell about your product', class: "form-control" %>
+  <%= f.text_field :price, placeholder: 'eq. Php 1000', class: "form-control" %>
+  <div class="form-group">
+    <%= f.check_box :active %> Active
+  </div>
+  <div class="form-group">
+    <%= f.check_box :is_selling %> is_selling
+  </div>
+  <div class="form-group">
+    <%= f.check_box :is_available %> is_available
+  </div>
+  <div class="form-group">
+    <%= f.check_box :is_new %> is_new
+  </div>
+  <%= f.submit "Save", class: "btn btn-primary" %>
+<% end %>
