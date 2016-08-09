@@ -12,7 +12,7 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @product.price %>
+  ₱ <%= number_with_precision(@product.price, :precision => 2, :delimiter => ',') %>
 </p>
 
 <p>
@@ -22,27 +22,27 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @product.category %>
+  <%= @product.category.name %>
 </p>
 
 <p>
   <strong>Ad type:</strong>
-  <%= @product.ad_type %>
+  <%= @product.ad_type.name %>
 </p>
 
 <p>
   <strong>Status:</strong>
-  <%= @product.status %>
+  <%= @product.status.name %>
 </p>
 
 <p>
   <strong>Condition:</strong>
-  <%= @product.condition %>
+  <%= @product.condition.name %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @product.user %>
+  <%= @product.user.fullname %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |

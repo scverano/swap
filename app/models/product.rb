@@ -4,4 +4,8 @@ class Product < ApplicationRecord
   belongs_to :status
   belongs_to :condition
   belongs_to :user
+
+  validates :name, presence: true
+  validates :description, presence: true
+  validates :price, presence: true
 end

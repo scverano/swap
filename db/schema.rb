@@ -36,15 +36,15 @@ ActiveRecord::Schema.define(version: 20160809133634) do
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.decimal  "price",        default: "1.0"
+    t.decimal  "price"
     t.boolean  "active",       default: true
     t.integer  "category_id"
     t.integer  "ad_type_id"
     t.integer  "status_id"
     t.integer  "condition_id"
     t.integer  "user_id"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.index ["ad_type_id"], name: "index_products_on_ad_type_id", using: :btree
     t.index ["category_id"], name: "index_products_on_category_id", using: :btree
     t.index ["condition_id"], name: "index_products_on_condition_id", using: :btree

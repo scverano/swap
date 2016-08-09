@@ -14,12 +14,12 @@
                     <span class="product-price">₱ <%= number_with_precision(product.price, :precision => 2, :delimiter => ',') %></span>
                     <small class="text-muted"><%= product.category.name %></small>
                     <%= link_to product.name, product, class: 'product-name' %>
-                    <div class="small m-t-xs"><%= product.user.name %></div>
+                    <div class="small m-t-xs"><%= product.user.fullname %></div>
                     <div class="m-t text-righ">
                         <a href="#" class="btn btn-xs btn-outline btn-primary"><%= product.condition.name %> </a>
-                        <a href="#" class="btn btn-xs btn-outline btn-primary"><%= product.region.name %> </a>
-                        <a href="#" class="btn btn-xs btn-outline btn-primary"><%= product.province.name %> </a>
-                        <a href="#" class="btn btn-xs btn-outline btn-primary"><%= product.municipality.name %> </a>
+                        <a href="#" class="btn btn-xs btn-outline btn-primary"><%#= product.region.name %> </a>
+                        <a href="#" class="btn btn-xs btn-outline btn-primary"><%#= product.province.name %> </a>
+                        <a href="#" class="btn btn-xs btn-outline btn-primary"><%#= product.municipality.name %> </a>
                     </div>
                 </div>
             </div>
