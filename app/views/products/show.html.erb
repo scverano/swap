@@ -91,7 +91,7 @@
 <p id="notice"><%= notice %></p>
 
 <script>
-    $(document).ready(function () {
+    $(document).on("turbolinks:load", function () {
         $('.product-images').slick({dots: true});
     });
 </script>
