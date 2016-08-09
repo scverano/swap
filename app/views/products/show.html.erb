@@ -1,49 +1,101 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox product-detail">
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="product-images">
+                                <div>
+                                    <div class="image-imitation">
+                                        [IMAGE 1]
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="image-imitation">
+                                        [IMAGE 2]
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="image-imitation">
+                                        [IMAGE 3]
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <h2 class="font-bold m-b-xs">
+                                <%= @product.name %>
+                            </h2>
+                            <small><%= @product.category.name %></small>
+                            <hr>
+                            <div>
+                                <h1 class="product-main-price pull-right">&#8369; <%= number_with_precision(@product.price, :precision => 2, :delimiter => ',') %>
+                                    <small class="text-muted">Only</small>
+                                </h1>
+                                <!-- <button class="btn btn-primary pull-right">Add to cart</button> -->
+                                <dl class="dl-horizontal m-t-md">
+                                    <dt>Condition:</dt>
+                                    <dd><%= @product.condition.name %></dd>
+                                    <dt>Status:</dt>
+                                    <dd><%= @product.status.name %></dd>
+                                    <dt>Type:</dt>
+                                    <dd><%= @product.ad_type.name %></dd>
+                                    <br>
+                                    <dt>Member:</dt>
+                                    <dd><%= link_to @product.user.fullname, '#' %></dd>
+                                    <dt>Registered:</dt>
+                                    <dd><%= @product.user.created_at.strftime('%d %B %Y') %></dd>
+                                    <dt>Mobile number:</dt>
+                                    <dd>0942-825-2345</dd>
+                                    <dt>Last login:</dt>
+                                    <dd><%= time_ago_in_words(@product.user.last_sign_in_at) + ' ago' %></dd>
+                                    <!-- <dt>Location</dt> -->
+                                    <!-- <dd>Region IV, Quezon Province, Lucena City</dd> -->
+                                </dl>
+
+                            </div>
+                            <hr>
+                            <h4>Product description</h4>
+                            <div class="text-muted">
+                              <%= @product.description %>
+                            </div>
+                            <br>
+                            <div class="text-right">
+                                <div class="btn-group">
+                                    <button class="btn btn-white btn-sm">
+                                        <i class="fa fa-star"></i>
+                                        Add to wishlist
+                                    </button>
+                                    <button class="btn btn-white btn-sm">
+                                        <i class="fa fa-envelope"></i>
+                                        Leave a message
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox-footer">
+                    <span class="pull-right">
+                        <i class="fa fa-clock-o"></i>
+                        <%= time_ago_in_words(@product.created_at) + ' ago' %>  <!-- Add tooltip 22 May 2016 -->
+                    </span>
+                    <i class="fa fa-map-marker"></i> <strong>Location:</strong> Region IV, Quezon Province, Lucena City
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<script>
+    $(document).ready(function () {
+        $('.product-images').slick({dots: true});
+    });
+</script>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  ₱ <%= number_with_precision(@product.price, :precision => 2, :delimiter => ',') %>
-</p>
-
-<p>
-  <strong>Active:</strong>
-  <%= @product.active %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @product.category.name %>
-</p>
-
-<p>
-  <strong>Ad type:</strong>
-  <%= @product.ad_type.name %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @product.status.name %>
-</p>
-
-<p>
-  <strong>Condition:</strong>
-  <%= @product.condition.name %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @product.user.fullname %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Edit', edit_product_path(@product) %>
+|
 <%= link_to 'Back', products_path %>

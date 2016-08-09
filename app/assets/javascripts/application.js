@@ -24,3 +24,4 @@
 // Always at the bottom
 //= require inspinia
 //= require pace/pace.min
+//= require slick/slick.min
