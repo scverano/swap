@@ -4,26 +4,20 @@ one:
   name: MyString
   description: MyText
   price: 9.99
-  is_active: false
-  user: one
+  active: false
   category: one
   ad_type: one
   status: one
   condition: one
-  region: one
-  province: one
-  municipality: one
+  user: one
 
 two:
   name: MyString
   description: MyText
   price: 9.99
-  is_active: false
-  user: two
+  active: false
   category: two
   ad_type: two
   status: two
   condition: two
-  region: two
-  province: two
-  municipality: two
+  user: two

@@ -17,7 +17,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create product" do
     assert_difference('Product.count') do
-      post products_url, params: { product: { ad_type_id: @product.ad_type_id, category_id: @product.category_id, condition_id: @product.condition_id, description: @product.description, is_active: @product.is_active, municipality_id: @product.municipality_id, name: @product.name, price: @product.price, province_id: @product.province_id, region_id: @product.region_id, status_id: @product.status_id, user_id: @product.user_id } }
+      post products_url, params: { product: { active: @product.active, ad_type_id: @product.ad_type_id, category_id: @product.category_id, condition_id: @product.condition_id, description: @product.description, name: @product.name, price: @product.price, status_id: @product.status_id, user_id: @product.user_id } }
     end
 
     assert_redirected_to product_url(Product.last)
@@ -34,7 +34,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update product" do
-    patch product_url(@product), params: { product: { ad_type_id: @product.ad_type_id, category_id: @product.category_id, condition_id: @product.condition_id, description: @product.description, is_active: @product.is_active, municipality_id: @product.municipality_id, name: @product.name, price: @product.price, province_id: @product.province_id, region_id: @product.region_id, status_id: @product.status_id, user_id: @product.user_id } }
+    patch product_url(@product), params: { product: { active: @product.active, ad_type_id: @product.ad_type_id, category_id: @product.category_id, condition_id: @product.condition_id, description: @product.description, name: @product.name, price: @product.price, status_id: @product.status_id, user_id: @product.user_id } }
     assert_redirected_to product_url(@product)
   end
 

@@ -16,13 +16,8 @@
 </p>
 
 <p>
-  <strong>Is active:</strong>
-  <%= @product.is_active %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @product.user %>
+  <strong>Active:</strong>
+  <%= @product.active %>
 </p>
 
 <p>
@@ -46,18 +41,8 @@
 </p>
 
 <p>
-  <strong>Region:</strong>
-  <%= @product.region %>
-</p>
-
-<p>
-  <strong>Province:</strong>
-  <%= @product.province %>
-</p>
-
-<p>
-  <strong>Municipality:</strong>
-  <%= @product.municipality %>
+  <strong>User:</strong>
+  <%= @product.user %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
