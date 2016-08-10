@@ -25,3 +25,4 @@
 //= require inspinia
 //= require pace/pace.min
 //= require slick/slick.min
+//= require summernote/summernote.min

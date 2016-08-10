@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Create list of categories
-categories = [ 
-	# "Art & Paintings", 
+categories = [
+	# "Art & Paintings",
 	"Automobiles & Supplies",
 	"Babies & Kids",
 	# "Books",
@@ -38,28 +38,28 @@ categories.each do |category|
 end
 
 # Create list of Status
-statuses = [ "available", "sold" ]
+statuses = [ "Available", "Sold" ]
 
 statuses.each do |status|
   Status.create!(:name => status)
 end
 
 # Create list of Conditions
-conditions = [ "new", "used" ]
+conditions = [ "Brand new", "Used" ]
 
 conditions.each do |condition|
   Condition.create!(:name => condition)
 end
 
 # Create list of Ad Type
-ad_types = [ "sell", "buy" ]
+ad_types = [ "Sell", "Buy" ]
 
 ad_types.each do |ad_type|
   AdType.create!(:name => ad_type)
 end
 
-regions = ["NCR", "CAR", "Region 1 - Ilocos Region", "Region 2 - Cagayan Valley", "Region 3 - Central Luzon", "Region 4A - CALABARZON", 
-			"Region 4B - MIMAROPA", "Region 5 - Bicol Region", "Region 6 - Western Visayas", "Region 7 - Central Visayas", 
+regions = ["NCR", "CAR", "Region 1 - Ilocos Region", "Region 2 - Cagayan Valley", "Region 3 - Central Luzon", "Region 4A - CALABARZON",
+			"Region 4B - MIMAROPA", "Region 5 - Bicol Region", "Region 6 - Western Visayas", "Region 7 - Central Visayas",
 			"Region 8 - Eastern Visayas", "Region 9 - Zamboanga Peninsula", "Region 10 - Northern Mindanao", "Region 11 - Davao Region",
 			"Region 12 - SOCCSKSARGEN",  "Region 13 - CARAGA",  "ARMM"
  			]
@@ -255,49 +255,49 @@ Province.all.each do |province|
 		municipalities.each do |municipality|
 			Municipality.create(name: municipality, province_id: province.id )
 		end
-	end	
+	end
 	if province.name.eql?('Dinagat Islands')
 		municipalities = [ "Basilisia (Rizal)", "Cagdianao", "Dinagat", "Libjo (Albor) ", "Loreto", "San Jose", "Tubajon" ]
 		municipalities.each do |municipality|
 			Municipality.create(name: municipality, province_id: province.id )
 		end
-	end	
+	end
 	if province.name.eql?('Eastern Samar')
 		municipalities = [ "Borongan City", "Arteche", "Balangiga", "Balangkayan", "Can-avid", "Dolores", "General MacArthur", "Giporlos", "Guiuan", "Hernani", "Jipapad", "Lawaan", "Llorente", "Maslog", "Maydolong", "Mercedes", "Oras", "Quinapondan", "Salcedo", "San Julian", "San Policarpo", "Sulat", "Taft" ]
 		municipalities.each do |municipality|
 			Municipality.create(name: municipality, province_id: province.id )
 		end
-	end	
+	end
 	if province.name.eql?('Guimaras')
 		municipalities = [ "Buenavista", "Jordan", "Nueva Valencia", "San Lorenzo", "Sibunag" ]
 		municipalities.each do |municipality|
 			Municipality.create(name: municipality, province_id: province.id )
 		end
-	end	
+	end
 	if province.name.eql?('Ifugao')
 		municipalities = [ "Aguinaldo", "Alfonso Lista", "Asipulo", "Banaue", "Hingyon", "Hungduan", "Kiangan", "Lagawe", "Lamut", "Mayoyao", "Tinoc" ]
 		municipalities.each do |municipality|
 			Municipality.create(name: municipality, province_id: province.id )
 		end
-	end	
+	end
 	if province.name.eql?('Ilocos Norte')
 		municipalities = [ "Laoag City", "Batac City", "Adams", "Bacarra", "Badoc", "Bangui", "Banna", "Burgos", "Carasi", "Currimao", "Dingras", "Dumalneg", "Marcos", "Nueva Era", "Pagudpud", "Paoay", "Pasuquin", "Piddig", "Pinili", "San Nicolas", "Sarrat", "Solsona", "Vintar" ]
 		municipalities.each do |municipality|
 			Municipality.create(name: municipality, province_id: province.id )
 		end
-	end	
+	end
 	if province.name.eql?('Ilocos Sur')
 		municipalities = [ "Candon City", "Vigan City", "Alilem", "Banayoyo", "Bantay", "Burgos", "Cabugao", "Caoayan", "Cervantes", "Galimuyod", "Gregorio Del Pilar", "Lidlidda", "Magsingal", "Nagbukel", "Narvacan", "Quirino", "Salcedo", "San Emilio", "San Esteban", "San Ildefonso", "San Juan", "San Vicente", "Santa", "Santa Catalina", "Santa Cruz", "Santa Lucia", "Santa Maria", "Santiago", "Santo Domingo", "Sigay", "Sinait", "Sugpon", "Suyo", "Tagudin" ]
 		municipalities.each do |municipality|
 			Municipality.create(name: municipality, province_id: province.id )
 		end
-	end	
+	end
 	if province.name.eql?('Ilo-Ilo')
 		municipalities = [ "Passi City", "Iloilo City", "Ajuy", "Alimodian", "Anilao", "Badiangan", "Balasan", "Banate", "Barotac Nuevo", "Barotac Viejo", "Batad", "Bingawan", "Cabatuan", "Calinog", "Carles", "Concepcion", "Dingle", "Dueñas", "Dumangas", "Estancia", "Guimbal", "Igbaras", "Janiuay", "Lambunao", "Leganes", "Lemery", "Leon", "Maasin", "Miagao", "Mina", "New Lucena", "Oton", "Pavia", "Pototan", "San Dionisio", "San Enrique", "San Joaquin", "San Miguel", "San Rafael", "Santa Barbara", "Sara", "Tigbauan", "Tubungan", "Zarraga" ]
 		municipalities.each do |municipality|
 			Municipality.create(name: municipality, province_id: province.id )
 		end
-	end	
+	end
 	if province.name.eql?('Isabela')
 		municipalities = [ "Cauayan City", "Santiago City", "Alicia", "Angadanan", "Aurora", "Benito Soliven", "Burgos", "Cabagan", "Cabatuan", "Cordon", "Delfin Albano", "Dinapigue", "Divilacan", "Echague", "Gamu", "Ilagan", "Jones", "Luna", "Maconacon", "Mallig", "Naguilian", "Palanan", "Quezon", "Quirino", "Ramon", "Reina Mercedes", "Roxas", "San Agustin", "San Guillermo", "San Isidro", "San Manuel", "San Mariano", "San Mateo", "San Pablo", "Santa Maria", "Santo Tomas", "Tumauini" ]
 		municipalities.each do |municipality|

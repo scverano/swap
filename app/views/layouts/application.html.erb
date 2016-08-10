@@ -23,12 +23,6 @@
                         <%= notice %>
                         <%= alert %>
 
-                        <!-- Devise links -->
-                        <%= link_to "Log In", new_user_session_path %>
-                        <%= link_to "Sign Up", new_user_registration_path %>
-                        <%= link_to "Edit Profile", edit_user_registration_path %>
-                        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-
                         <%= yield %>
                     </div>
                 </div>

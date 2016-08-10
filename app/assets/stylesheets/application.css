@@ -17,6 +17,8 @@
  *= require animate
  *= require slick/slick
  *= require slick/slick-theme
+ *= require summernote/summernote
+ *= require summernote/summernote-bs3
  *
  * Always at the bottom
  *= require style
