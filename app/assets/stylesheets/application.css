@@ -23,6 +23,7 @@
  *
  * Always at the bottom
  *= require style
+ *= require custom
  */
 
  .avatar-small {
