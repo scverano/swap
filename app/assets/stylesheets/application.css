@@ -19,6 +19,7 @@
  *= require slick/slick-theme
  *= require summernote/summernote
  *= require summernote/summernote-bs3
+ *= require iCheck/custom
  *
  * Always at the bottom
  *= require style

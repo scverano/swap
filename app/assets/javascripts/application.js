@@ -26,3 +26,11 @@
 //= require pace/pace.min
 //= require slick/slick.min
 //= require summernote/summernote.min
+//= require iCheck/icheck.min
+
+$(document).on("turbolinks:load", function () {
+    $('.i-checks').iCheck({
+        checkboxClass: 'icheckbox_square-green',
+        radioClass: 'iradio_square-green',
+    });
+});
