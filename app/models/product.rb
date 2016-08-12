@@ -14,6 +14,6 @@ class Product < ApplicationRecord
   end
 
   def description
-    self[:description].html_safe
+    ApplicationController.helpers.raw(self[:description])
   end
 end
