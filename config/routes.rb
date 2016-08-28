@@ -13,4 +13,6 @@ Rails.application.routes.draw do
     get 'my', on: :collection
   end
 
+  resources :photos
+
 end

@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @products = @product.photos
   end
 
   # GET /products/new
@@ -24,6 +25,9 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    if current_user.id == @product.user.id
+      @photos = @product.photos
+    end
   end
 
   # POST /products
@@ -33,6 +37,13 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
+        if params[:images]
+          params[:images].each do |image|
+            @product.photos.create(image: image)
+          end
+        end
+
+        # @photos = @product.photos
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
@@ -47,6 +58,11 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
+        if params[:images]
+          params[:images].each do |image|
+            @product.photos.create(image: image)
+          end
+        end
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
       else

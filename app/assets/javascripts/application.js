@@ -27,6 +27,8 @@
 //= require slick/slick.min
 //= require summernote/summernote.min
 //= require iCheck/icheck.min
+//= require sweetalert2
+//= require rails-sweetalert2-confirm
 
 $(document).on("turbolinks:load", function () {
     $('.i-checks').iCheck({

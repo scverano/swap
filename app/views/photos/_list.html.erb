@@ -1,0 +1,32 @@
+<% if @photos %>
+  <div class="row">
+    <% @photos.each do |photo| %>
+      <div class="col-md-3">
+          <div class="ibox">
+              <div class="ibox-content product-box">
+                <div class="product-desc">
+                    <span class="product-price">
+                      <%= link_to photo, method: :delete, data: { confirm: "Are you sure?", remote: true } do %>
+                        <i class="fa fa-times"></i>
+                      <% end %>
+
+                    </span>
+                </div>
+                  <div class="product-imitation preview">
+                      <%= image_tag photo.image.url() %>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<style>
+    .product-desc { padding: 0 }
+    .product-price { top: 0; padding: 3px 6px; cursor: pointer;}
+    .product-price a { color: white; }
+    .product-imitation.preview { padding: 0; }
+    .product-imitation.preview img { width: 100%; }
+</style>

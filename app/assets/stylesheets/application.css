@@ -20,6 +20,7 @@
  *= require summernote/summernote
  *= require summernote/summernote-bs3
  *= require iCheck/custom
+ *= require sweetalert2
  *
  * Always at the bottom
  *= require style

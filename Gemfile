@@ -32,6 +32,10 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
+gem 'paperclip'
+gem 'rails-sweetalert2-confirm'
+gem 'rails-assets-sweetalert2', source: 'https://rails-assets.org'
+
 # Use Capistrano for deployment
 group :development do
   gem 'capistrano', '~> 3.1'

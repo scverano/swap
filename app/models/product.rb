@@ -5,6 +5,8 @@ class Product < ApplicationRecord
   belongs_to :condition
   belongs_to :user
 
+  has_many :photos
+
   validates :name, presence: true
   validates :description, presence: true
   validates :price, presence: true
